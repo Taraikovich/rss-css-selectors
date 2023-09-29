@@ -1,0 +1,13 @@
+pre {
+    margin: 7px 5px;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+pre code.hljs {
+    background: none;
+    padding: 0;
+    margin-bottom: 0.145em;
+    font-size: 1rem;
+    overflow: visible;
+}

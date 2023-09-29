@@ -1,0 +1,46 @@
+.frame_code {
+    display: grid;
+    grid-template-columns: 40px 13.4fr 1fr;
+    grid-template-rows: 40px 40px 2.4fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerCode headerCode headerCode"
+        "numcode code code"
+        "numcode code code";
+    grid-area: editor;
+    background-color: #fcffc4;
+    &__header {
+        grid-area: headerCode;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
+        background-color: #6975a6;
+        color: #fcffc4;
+    }
+    &__line-numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        grid-area: numcode;
+        background-color: #f28a30;
+        color: #fcffc4;
+        font-weight: bold;
+        padding: 5px;
+    }
+    &__markup {
+        grid-area: code;
+        code {
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+.showTag {
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+    color: black;
+    white-space: nowrap;
+}

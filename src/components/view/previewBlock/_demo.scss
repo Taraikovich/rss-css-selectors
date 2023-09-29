@@ -1,0 +1,354 @@
+// level 1
+
+.lawn {
+    display: flex;
+    align-items: self-end;
+    justify-content: space-around;
+    background: url(./images/lawn.jpg) center/cover;
+    width: 300px;
+    height: 150px;
+}
+
+dog {
+    display: block;
+    background: url(./images/dog1.png) center/cover;
+    width: 90px;
+    height: 120px;
+    transform-origin: bottom;
+    animation: strobeStart 0.5s ease-out, strobe 1s infinite;
+    animation-delay: 0s, 0.5s;
+}
+
+dog:nth-child(2) {
+    background: url(./images/dog2.png) center/cover;
+}
+
+dog:nth-child(3) {
+    background: url(./images/dog3.png) center/cover;
+}
+
+.room {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: url(./images/room.png) center/cover;
+    width: 300px;
+    height: 150px;
+}
+
+cat {
+    display: block;
+    background: url(./images/cat.png) center/cover;
+    width: 60px;
+    height: 80px;
+    margin-left: 5px;
+}
+
+pillow {
+    display: block;
+    background: url(./images/pillow.png) center/cover;
+    width: 150px;
+    height: 110px;
+}
+
+pillow cat {
+    position: relative;
+    transform-origin: bottom;
+    animation: strobeStart 0.5s ease-out, strobe 1s infinite;
+    animation-delay: 0s, 0.5s;
+    top: 30px;
+    left: 35px;
+    width: 80px;
+    height: 50px;
+    background: url(./images/cat2.png) center/cover;
+}
+
+leaf {
+    display: block;
+    background: yellow;
+    width: 70px;
+    height: 30px;
+}
+
+.swamp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 150px;
+    background-color: #1f5768;
+}
+
+frog {
+    display: block;
+    width: 60px;
+    height: 45px;
+}
+
+frog.green {
+    background: url(./images/frog-green.svg) center/cover;
+}
+
+frog.yellow {
+    background: url(./images/frog-yellow.svg) center/cover;
+}
+
+frog.red {
+    background: url(./images/frog-red.svg) center/cover;
+}
+
+lilypad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 89px;
+}
+
+lilypad.green {
+    background: url(./images/lilypad-green.svg) center/contain no-repeat;
+}
+
+lilypad.yellow {
+    background: url(./images/lilypad-yellow.svg) center/contain no-repeat;
+}
+
+lilypad.red {
+    background: url(./images/lilypad-red.svg) center/contain no-repeat;
+}
+
+lilypad > lilypad {
+    margin: 0 0 30px 5px;
+}
+
+lilypad > lilypad > lilypad {
+    margin: 0 0 30px 5px;
+}
+
+// level 5, 6
+.road {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 150px;
+    background: url(./images/road.png) center/cover no-repeat;
+}
+
+line {
+    display: flex;
+}
+
+car {
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: 0 15px;
+}
+
+car:nth-child(1) {
+    background: url(./images/car1.png) center/cover no-repeat;
+}
+
+car:nth-child(2) {
+    background: url(./images/car2.png) center/cover no-repeat;
+}
+
+car:nth-child(3) {
+    background: url(./images/car3.png) center/cover no-repeat;
+}
+
+car:nth-child(4) {
+    background: url(./images/car4.png) center/cover no-repeat;
+}
+
+line:last-child car:nth-child(1) {
+    background: url(./images/car4.png) center/cover no-repeat;
+    animation: none;
+}
+
+line:last-child car:nth-child(2) {
+    background: url(./images/car5.png) center/cover no-repeat;
+}
+
+line:last-child car:nth-child(3) {
+    background: url(./images/car6.png) center/cover no-repeat;
+}
+
+// level 7, 8
+
+.white-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 450px;
+    height: 150px;
+    background-color: #c6c6c6;
+}
+
+div[lang],
+div[framework] {
+    width: 100px;
+    height: 100px;
+}
+
+div[lang="php"] {
+    background: url(./images/php.png) center/contain no-repeat;
+}
+
+div[lang="js"] {
+    background: url(./images/js.png) center/contain no-repeat;
+}
+
+div[lang="c#"] {
+    background: url(./images/csharp.png) center/contain no-repeat;
+}
+
+div[lang="java"] {
+    background: url(./images/java.png) center/contain no-repeat;
+}
+
+div[lang="ts"] {
+    background: url(./images/typescript.png) center/contain no-repeat;
+}
+
+div[framework="react"] {
+    background: url(./images/react.png) center/contain no-repeat;
+}
+
+div[framework="angular"] {
+    background: url(./images/angular.png) center/contain no-repeat;
+}
+
+// level 9
+
+.pond {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 150px;
+    padding-left: 100px;
+    background-color: #1f5768;
+}
+
+.pond div {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 89px;
+    background: url(./images/lilypad-green.svg) center/contain no-repeat;
+}
+
+.pond div div {
+    margin-left: 40px;
+    background: url(./images/lilypad-yellow.svg) center/contain no-repeat;
+}
+
+.pond div div div {
+    background: url(./images/lilypad-red.svg) center/contain no-repeat;
+}
+.pond div div div div {
+    background: url(./images/lilypad-green.svg) center/contain no-repeat;
+}
+
+.pond div div div div div {
+    background: url(./images/lilypad-yellow.svg) center/contain no-repeat;
+}
+
+.pond div div div div div div {
+    background: url(./images/lilypad-red.svg) center/contain no-repeat;
+}
+
+// level 10
+
+.garden {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 150px;
+    background: url(./images/garden.png) center/cover no-repeat;
+}
+
+.watermelon {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 89px;
+    background: url(./images/watermelon.png) center/contain no-repeat;
+}
+
+// animations
+
+.target {
+    transform-origin: bottom;
+    animation: strobeStart 0.5s ease-out, strobe 1s infinite;
+    animation-delay: 0s, 0.5s;
+}
+
+.right {
+    position: relative;
+    animation: flyOutLeft 1s forwards;
+}
+
+@keyframes flyOutLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+.wrong {
+    position: relative;
+    animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes strobeStart {
+    0% {
+        transform: skew(0deg, 0deg) scaleY(1);
+        animation-timing-function: ease-in;
+    }
+    40% {
+        transform: skew(0deg, 0deg) scaleY(0.9);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: skew(4deg, 0deg) scaleX(1);
+    }
+}
+
+@keyframes strobe {
+    0% {
+        transform: skew(4deg, 0deg) scaleX(1);
+    }
+    10% {
+        transform: skew(1deg, 0deg) scaleY(0.9);
+    }
+
+    50% {
+        transform: skew(-4deg, 0deg) scaleX(1);
+    }
+    60% {
+        transform: skew(-1deg, 0deg) scaleY(0.9);
+    }
+    100% {
+        transform: skew(4deg, 0deg) scaleX(1);
+    }
+}

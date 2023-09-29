@@ -1,0 +1,61 @@
+.levelsList {
+    background-color: #6975a6;
+    &__header {
+        font-weight: bold;
+    }
+    &__item {
+        text-align: center;
+        list-style-type: none;
+        cursor: pointer;
+        background-color: #6565a5;
+        margin: 5px 0;
+    }
+    &__resetBtn {
+        padding: 5px;
+        background-color: #f3f96b;
+        color: #f05837;
+        font-weight: bold;
+        border: 2px solid #f05837;
+        margin: 20px 2px;
+        transition: all .3s ease;
+    }
+    &__resetBtn:hover {
+        background-color: #f05837;
+        color: #f3f96b;
+        border: 2px solid #f3f96b;
+    }
+    &__helpBtn {
+        padding: 5px;
+        background-color: #f3f96b;
+        color: #f05837;
+        font-weight: bold;
+        border: 2px solid #f05837;
+        margin: 20px 2px;
+        transition: all .3s ease;
+    }
+    &__helpBtn:hover {
+        background-color: #f05837;
+        color: #f3f96b;
+        border: 2px solid #f3f96b;
+    }
+}
+
+.done::before {
+    content: "";
+    display: inline-block;
+    border: solid #f3f96b;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    width: 8px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.used-help::after {
+    content: ": /help/";
+    display: inline-block;
+}
+
+.current {
+    color: #f28a30;
+}

@@ -1,0 +1,136 @@
+@import "./components/view/levelsBlock/levels", "./components/view/editorBlock/editor",
+    "./components/view/codeBlock/code", "./components/view/previewBlock/visual";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 0.6fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header list"
+        "preview preview list"
+        "editor code list"
+        "editor code list"
+        "editor code list"
+        "footer footer list";
+    background-color: #6565a5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    grid-area: header;
+    background-color: #6975a6;
+    color: #f3e96b;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.frame_preview {
+    grid-area: preview;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #f3e96b;
+}
+
+.frame_editor {
+    grid-area: editor;
+}
+
+.frame_code {
+    grid-area: code;
+}
+
+.frame_levels {
+    grid-area: list;
+    background-color: #6975a6;
+    color: #f3e96b;
+    border-left: 5px dotted #f05837;
+    padding: 75px 15px 15px;
+    transition: all 0.5s ease;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #6975a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f3e96b;
+    a {
+        color: #f3e96b;
+    }
+    img {
+        width: 70px;
+        margin-left: 20px;
+    }
+}
+
+.enter-btn {
+    padding: 5px;
+    background-color: #f3f96b;
+    color: #f05837;
+    font-weight: bold;
+    border: 2px solid #f05837;
+    transition: all 0.3s ease;
+}
+.enter-btn:hover {
+    background-color: #f05837;
+    color: #f3f96b;
+    border: 2px solid #f3f96b;
+}
+
+.burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 740px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.4fr 0.9fr 2.4fr 0.3fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header"
+            "preview preview"
+            "editor code"
+            "footer footer";
+    }
+
+    .frame_levels {
+        position: absolute;
+        right: -100%;
+        height: 100vh;
+    }
+
+    .burger-menu {
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 25px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        transform: rotate(90deg);
+        font-weight: bold;
+        font-size: 30px;
+        color: #f3f96b;
+        letter-spacing: -10px;
+    }
+    .burger-menu-open {
+        transform: rotate(0deg);
+    }
+    .frame_levels-hide {
+        right: 0;
+    }
+}

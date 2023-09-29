@@ -1,0 +1,36 @@
+.frame_editor {
+    display: grid;
+    grid-template-columns: 30px 13.4fr 1fr;
+    grid-template-rows: 40px 30px 2.4fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerEditor headerEditor headerEditor"
+        "numeditor input input"
+        "numeditor help help";
+    grid-area: editor;
+    background-color: #fcffc4;
+    &__header {
+        grid-area: headerEditor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
+        background-color: #f05837;
+        color: #fcffc4;
+    }
+    &__line-numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        grid-area: numeditor;
+        background-color: #f28a30;
+        color: #fcffc4;
+        font-weight: bold;
+        padding: 5px;
+    }
+    &__placeholder {
+        position: relative;
+        left: 10px;
+        color: gray;
+    }
+}
